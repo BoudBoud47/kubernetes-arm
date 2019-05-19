@@ -21,11 +21,11 @@ spec:
               mountPath: /persistentvolumes
           env:
             - name: PROVISIONER_NAME
-              value: nfs-provisioner/nfs-ssd1
+              value: nfs-provisioner/nfs-ssd-nano-pc
             - name: NFS_SERVER
-              value: 192.168.1.60
+              value: 192.168.1.102
             - name: NFS_PATH
-              value: /data/kubernetes-storage
+              value: /mnt/nvme0n1p1/kube
       affinity:
         podAntiAffinity:
           preferredDuringSchedulingIgnoredDuringExecution:
