@@ -2,6 +2,7 @@ kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
   name: test-claim
+  namespace: nfs-storage
   annotations:
     volume.beta.kubernetes.io/storage-class: "nfs-ssd-nano-pc"
 spec:
@@ -9,4 +10,4 @@ spec:
     - ReadWriteMany
   resources:
     requests:
-      storage: 1Mi
+      storage: 3Mi
