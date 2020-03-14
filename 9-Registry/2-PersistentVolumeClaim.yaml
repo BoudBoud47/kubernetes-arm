@@ -1,0 +1,13 @@
+kind: PersistentVolumeClaim                                                            
+apiVersion: v1                                                                         
+metadata:                                                                              
+  name: docker-registry-pvc                                                                     
+  namespace: registry                                                               
+  annotations:                                                                         
+    volume.beta.kubernetes.io/storage-class: "nfs-ssd-nano-pc"                         
+spec:                                                                                  
+  accessModes:                                                                         
+    - ReadWriteMany                                                                    
+  resources:                                                                           
+    requests:                                                                          
+      storage: 70Gi                                                                     
